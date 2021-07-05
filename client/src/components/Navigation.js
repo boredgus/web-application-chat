@@ -21,23 +21,27 @@ function Navigation() {
     let contactsElements;
 
     function renderContacts() {
-        let contactsObjects = users.filter((contact) => contact.name !== currentUser);
-        if (mode === 'online') {
-            contactsObjects = contactsObjects.filter((contact) => contact.status === 'online')
-        }
 
-        if (filter.length > 0) {
-            contactsObjects = contactsObjects.filter((obj) => obj.name.toLowerCase().includes(filter.toLowerCase()));
-        }
+        if (Object.keys(contacts).length > 0) {
+            let contactsObjects = users.filter((contact) => contact.name !== currentUser);
+            if (mode === 'online') {
+                contactsObjects = contactsObjects.filter((contact) => contact.status === 'online')
+            }
 
-        if (contactsObjects.length > 0) {
-            return contactsObjects.map((user) => {
-                const allContactMessages = currentUserMessages[user.name].messages;
-                const lastMessage = allContactMessages.length > 0 ? allContactMessages[allContactMessages.length - 1] : undefined;
-                return <Contact key={user.name} user={user} lastMessage={lastMessage} />
-            });
+            if (filter.length > 0) {
+                contactsObjects = contactsObjects.filter((obj) => obj.name.toLowerCase().includes(filter.toLowerCase()));
+            }
+
+            if (contactsObjects.length > 0) {
+                return contactsObjects.map((user) => {
+                    const allContactMessages = currentUserMessages[user.name].messages;
+                    const lastMessage = allContactMessages.length > 0 ? allContactMessages[allContactMessages.length - 1] : undefined;
+                    return <Contact key={user.name} user={user} lastMessage={lastMessage} />
+                });
+            }
+            return <div className='no-such-contact'>There is no <em>'{filter}'</em> contact.</div>
         }
-        return <div className='no-such-contact'>There is no <em>'{filter}'</em> contact.</div>
+        return <div>no contacts</div>
     }
 
     function handleSearchInputChange({ target }) {
