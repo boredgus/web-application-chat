@@ -13,3 +13,5 @@ Also any user can start chatting with other connected users.
 1. SASS
 
 > To run project localy use command `npm start`
+
+> P.S. in `/helpers/initialValues.json` you can find initial state of database

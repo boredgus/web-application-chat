@@ -1,0 +1,53 @@
+@media screen and (max-width: 1200px) {
+  .App {
+    width: 98%;
+    .navigation {
+      width: 35%;
+    }
+    .chat,
+    .welcome {
+      width: 65%;
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .App {
+    position: relative;
+    .mobile-menu-icon {
+      display: block;
+    }
+    .navigation {
+      width: 50%;
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1;
+      .contacts {
+        flex-grow: 2;
+      }
+    }
+    .chat,
+    .welcome {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .App {
+    .mobile-menu-icon {
+      width: 30px;
+      &.open {
+        width: 20px;
+      }
+    }
+    .navigation {
+      width: 80%;
+      .contacts {
+        flex-grow: 2;
+      }
+    }
+  }
+}

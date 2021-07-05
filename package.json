@@ -1,0 +1,22 @@
+{
+  "name": "genesis-test-task",
+  "version": "1.0.0",
+  "description": "genesis test task junior js full-stack developer",
+  "main": "index.js",
+  "scripts": { 
+    "server": "node index",
+    "build": "npm run build --prefix client",
+    "start": "npm run build && npm run server"
+  },
+  "keywords": [],
+  "author": "Daryna Kharchenko",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "socket.io": "^4.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.8"
+  }
+}

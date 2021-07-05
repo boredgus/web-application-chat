@@ -1,0 +1,29 @@
+{
+    "users": [
+        {
+            "name": "Echo Bot",
+            "photo": "https://www.pngarea.com/pngs/2/4991661_waves-png-radio-waves-png-gif-transparent-png.png",
+            "status": "online",
+            "description": "Echo Bot sends the same message as you to him."
+        },
+        {
+            "name": "Reverse Bot",
+            "photo": "https://static.wixstatic.com/media/d2e9d0_96dee441673e47f69e47cc603f8ab6b7~mv2.gif",
+            "status": "online",
+            "description": "Reverse Bot answer your message by sending reversed one."
+        },
+        {
+            "name": "Spam Bot",
+            "photo": "https://images-na.ssl-images-amazon.com/images/I/A1xRLOh8ukL._SX425_PIbundle-12,TopRight,0,0_AA425SH20_.jpg",
+            "status": "online",
+            "description": "Spam Bot "
+        },
+        {
+            "name": "Ignore Bot",
+            "photo": "https://pyxis.nymag.com/v1/imgs/62c/fa8/6e52acce958795508a7ecbf6a3656c0190-11-drake-hotline-bling.rsquare.w700.jpg",
+            "status": "online",
+            "description": ""
+        }
+    ],
+    "contacts": {}
+}
